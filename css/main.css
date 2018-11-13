@@ -6,9 +6,8 @@ The line height on the <p> tag gives each box a height value*/
 
 p
 {
-	color: #fff;
+	color: #000;
 	line-height: 100px;
-	background: #000;
 	text-align: center;
 	margin: 0;
 }
@@ -64,8 +63,7 @@ a:hover, a:active
 /*section is block level and no width specidied therefore stretches full screen*/
 #topBar
 {
-	background-color: #000;
-	height: 20px;
+	height: 50px;
 }
 
 /*Site Container*/

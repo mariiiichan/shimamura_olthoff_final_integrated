@@ -45,7 +45,8 @@ a:visited is for visited, and just a applies to both.*/
 
 a:link, a:visited 
 { 
- 	text-decoration:none; 	
+ 	text-decoration:none; 
+ 	display: inline;	
 }
 
 a:hover, a:active 
@@ -93,7 +94,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 /*This is a flex item*/
 #logo
 {
-	width: 200px;
+	width: 325px;
 }
 
 /*This is also a flex item*/
@@ -101,10 +102,34 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 #mainNav 
 {
 	margin-left: auto;
-	width: 500px;
+	width: 600px;
 }
 
-#promo 
+/*Makes lists appear side by side with no bullets for navs*/
+nav ul
+{
+	list-style: none;
+	padding-top: 35px;
+}
+
+nav ul li
+{
+	display: inline;
+}
+
+#mainNav ul li
+{
+	padding-left: 25px;
+	font-size: 15px;
+}
+
+#footerNav ul li
+{
+	padding-right: 25px;
+	font-size: 12px;
+}
+
+#budweiserGardens
 {
 	margin-top: 40px;
 	border-bottom: solid 1px #DDD;
@@ -115,23 +140,23 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 
 /*Get rid of this, here just to give different height to promo*/
-#promo p 
+#budweiserGardens p 
 {
 	line-height: 250px;
 }
 
-#promoText 
+#budweiserGardensText 
 {
 	width: 600px;
 }
 
-#promoImage 
+#budweiserGardensImage 
 {
 	margin-left: auto;
 	width: 280px;
 }
 
-#productInfo 
+#popularAttractions
 {
 	margin-top: 40px;
 	display: flex;
@@ -142,12 +167,12 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 
 /*Get rid of this, here just to give different height to productInfo*/
-#productInfo p 
+#popularAttractions p 
 {
 	line-height: 300px;
 }
 
-.productDesc 
+.attraction 
 {
 	width: 200px;
 }
@@ -163,7 +188,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #footerNav 
 {
-	width: 500px;
+	width: 700px;
 }
 
 #copyRight 
@@ -174,7 +199,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 /*Page 2 - Notice we are using one style sheet for all of the pages*/
 
-#contentCon {
+#contactContent {
 	margin-top: 40px;
 	border-bottom: solid 1px #DDD;
 	padding-bottom: 40px;
@@ -184,17 +209,17 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 
 /*Get rid of this, here just to give different height to promo*/
-#contentCon p 
+#contactContent p 
 {
 	line-height: 630px;
 }
 
-#content1 
+#contactForm
 {
 	width: 440px;
 }
 
-#content2 
+#contactInfo
 {
 	margin-left: auto;
 	width: 440px;
@@ -202,7 +227,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 /*Page 3*/
 
-#productImages 
+#thingsToDo
 {
 	margin-top: 40px;
 	border-bottom: solid 1px #DDD;
@@ -213,18 +238,17 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 
 /*Get rid of this, here just to give different height*/
-#productImages p
+#thingsToDo p
 {
 	line-height: 250px;
 }
 
-.productImg 
+.toDo
 {
 	width: 280px;
 }
 
-
-#contentAreaBig
+#aboutLondon
 {
 	margin-top: 40px;
 	border-bottom: solid 1px #DDD;
@@ -232,7 +256,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 
 /*Get rid of this, here just to give different height*/
-#contentAreaBig p 
+#aboutLondon p 
 {
 	line-height: 300px;
 }
@@ -241,17 +265,3 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 {
 	width: 920px;
 }
-
-
-/*Page 4*/
-
-.productDescLargeLeft 
-{
-	width: 410px;
-}
-
-.productDescLargeRight 
-{
-	width: 410px;
-}
-

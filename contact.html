@@ -41,13 +41,68 @@
             	<section id="contactForm">
                     <h3 class="hidden">Contact Form</h3>
 
-                    <p>contactForm</p>
+	                <!-- Contact Form -->
+					<form method="post" action="form.php" autocomplete="off">
+						<!-- Tells user about required fields -->
+						<p>* marks required fields.</p>
+						<br>
+
+						<!-- First Name -->
+						<label for="formFirstName">First Name*:</label>
+						<input id="formFirstName" type="text" required>
+						<br><br>
+						
+						<!-- Last Name -->
+						<label for="formLasttName">Last Name*:</label>
+						<input id="formLastName" type="text" required>
+						<br><br>
+
+						<!-- Email -->
+						<label for="formEmail">Email*:</label>
+						<input id="formEmail" type="Email" required>
+						<br><br>
+
+						<!-- Phone Number -->
+						<label for="phoneNumber">Phone Number:</label>
+						<input id="phoneNumber" type="tel">
+						<br><br>
+
+						<!-- Message -->
+						<label for="formMessage">Message*:</label>
+						<textarea id="formMessage" cols="50" rows="14" required></textarea>
+						<br><br>
+
+						<!-- Not a Robot -->
+						<input type="checkbox" required>Not a Robot<br>
+						<br>
+
+						<!-- Submit Button -->
+						<input id="submitButton" type="submit" value="Submit">
+					</form>
                 </section><!--End contactForm-->
 
             	<section id="contactInfo">
-                    <h3 class="hidden">Contact Info</h3>
+                    <h3 class="hidden">Contact Information</h3>
 
-                    <p>contactInfo</p>
+                    <!-- Contact information -->
+                    <address>
+						<p>Company: Discovering London Inc.<br><br>
+						
+						Phone Number:<br>
+						(519) 293-5028<br><br>
+
+						Hours:<br>
+						Monday - Saturday: 8AM - 4PM<br>
+						Sunday: 10AM - 3PM<br><br>
+						
+						Address:<br>
+						201 King Street<br>
+						London, ON, Canada<br>
+						N6A 1C9</p>
+					</address>
+
+					<!-- Map -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.7929301532304!2d-81.2495545847932!3d42.98263540354966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef21c898178c5%3A0x85ddc8fb405aa6fd!2s201+King+St%2C+London%2C+ON+N6A+1C9!5e0!3m2!1sen!2sca!4v1542652368331" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </section><!--End contactInfo-->
             </section><!--End contactContent-->
 

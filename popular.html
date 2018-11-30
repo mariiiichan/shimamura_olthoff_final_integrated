@@ -10,19 +10,56 @@
         <!-- Top Bar -->
         <section id="topBar">
             <h2 class="hidden">Top Bar</h2>
-        </section><!--End topBar-->
 
-    	<div id="siteContainer">
+            <div id="topBarCon">
+                <div id="socialMedia">
+                    <ul id="iconNav">
+                        <li id="facebook">
+                          <a href="http://www.facebook.com">
+                            <img src="images/facebook.svg" alt="Facebook" width="7" height="15">
+                          </a>
+                        </li><!-- End facebook -->
+
+                        <li id="twitter">
+                          <a href="http://www.twitter.com">
+                            <img src="images/twitter.svg" alt="Twitter" width="19" height="15">
+                          </a>
+                        </li><!-- End twitter -->
+
+                        <li id="youtube">
+                          <a href="http://www.youtube.com">
+                            <img src="images/youtube.svg" alt="Youtube" width="20" height="15">
+                          </a>
+                        </li><!-- End youtube -->
+
+                        <li id="instagram">
+                          <a href="http://www.instagram.com">
+                            <img src="images/instagram.svg" alt="instagram" width="15" height="15">
+                          </a>
+                        </li><!-- End instagram -->
+                    </ul><!-- End iconNav -->
+                </div><!-- End socialMedia -->
+
+                <div id="searchBar">
+                    <form method="post" action="form.php" autocomplete="off">
+                        <label>Search:</label>
+                        <input type="search">
+                    </form>
+                </div><!-- End searchBar -->
+            </div><!-- End topBarCon -->
+        </section><!--End topBar-->
+        
+        <div id="siteContainer">
             <h1 class="hidden">Discovering London</h1>
 
-        	<header id="mainHeader">
+            <header id="mainHeader">
                 <!-- Logo -->
-            	<div id="logo"><img src="images/logo.svg" alt="Discovering London Logo"></div><!--end logo-->
+                <div id="logo"><a href="index.html"><img src="images/logo.svg" alt="Discovering London Logo" width="325" height="77"></a></div><!--End logo-->
 
                 <!-- Main Nav -->
                 <nav id="mainNav">
                     <h2 class="hidden">Main Navigation</h2>
-                    
+
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="popular.html">Popular</a></li>
@@ -36,10 +73,24 @@
 
             <!-- Budweiser Gardens -->
             <section id="budweiserGardens">
-                <h2 class="hidden">Budweiser Gardens</h2>
+                <div id="budweiserGardensCon">
+                	<div id="budweiserGardensText">
+                    <h2>Budweiser Gardens</h2>
 
-            	<div id="budweiserGardensText"><p>Promo Text</p></div><!--end promoText-->
-            	<div id="budweiserGardensImage"><p>Promo Image</p></div><!--end promoImage-->
+                    <h3>Upcoming Events</h3>
+
+                        <ul>
+                            <li>November 23, 2018: <span class="event">London Knights vs. Owen Sound Attack</span></li>
+                            <li>November 24, 2018: <span class="event">Gordon Lightfoot</span></li>
+                            <li>November 25, 2018: <span class="event">Local Artisans and Performers Showcase</span></li>
+                            <li>November 26, 2018: <span class="event">Cirque Musica Holiday Presents Wonderland</span></li>
+                            <li>November 30, 2018: <span class="event">London Knights vs. Eerie Otters</span></li>
+                            <li>December 2, 2018: <span class="event">London Knights vs Sarnia Sting</span></li>
+                        </ul>
+                    </div><!--end promoText-->
+
+                	<div id="budweiserGardensPic"><img src="images/budweiser_gardens.jpg" alt="Budweiser Gardens" width="370" height="227"></div><!--end promoPic-->
+                </div><!-- End budweiserGardensCon -->
             </section><!--End budweiserGardens-->
 
             <!-- Popular Attractions -->
@@ -47,35 +98,53 @@
                 <h2 class="hidden">Popular Attractions</h2>
 
             	<section class="attraction">
+                    <img src="images/east_park.jpg" alt="East Park" width="200" height="160">
+
                     <h3>East Park</h3>
 
-                    <p>Product Image &amp; Text</p>
+                    <p>Water slides, a water park, an arcade, bumper cars, rock climbing, go carts, mini golf, batting cages, driving range, and a jungle gym, East Park is a dream for any kid! The perfect location for birthday parties!</p>
+
+                    <a href="#" class="learnMore">Learn More</a>
                 </section><!--End attraction1-->
 
                 <section class="attraction">
-                    <h3>Covent Garden Market</h3>
+                    <img src="images/museum_london.jpg" alt="Museum London" width="200" height="160">
 
-                    <p>Product Image &amp; Text</p>
+                    <h3>Museum London</h3>
+
+                    <p>Museum London is the spot for visual art and material culture. Within are over 5,000 regional and Canadian works of art as well as 45,000 historical artifacts that reflect the history of London!</p>
+
+                    <a href="#" class="learnMore">Learn More</a>
                 </section><!--End attraction2-->
 
                 <section class="attraction">
+                    <img src="images/richmond_row.jpg" alt="Richmond Row" width="200" height="160">
+
                     <h3>Richmond Row</h3>
 
-                    <p>Product Image &amp; Text</p>
+                    <p>With over 200 businesses catering to your every need, Richmond Row is one of the most popular places in London. It is also full of night life with multiple bars on the strip for those fun nights out!</p>
+
+                    <a href="#" class="learnMore">Learn More</a>
                 </section><!--End attraction3-->
 
                 <section class="attraction">
-                    <h3>Museum London</h3>
+                    <img src="images/covent_garden_market.jpg" alt="Covent Garden Market" width="200" height="160">
 
-                    <p>Product Image &amp; Text</p>
+                    <h3>Covent Garden Market</h3>
+
+                    <p>Covent Garden Market is renowned for its fresh produce, gourmet foods, unique gifts, Public Square, family programming, and seasonal outdoor farmers' Market! It even has an ice rink outside during the winter months!</p>
+
+                    <a href="#" class="learnMore">Learn More</a>
                 </section><!--End attraction4-->
             </section><!--End popularAttractions-->
+        </div><!--End siteContainer-->
 
-            <!-- Main Footer -->
-            <footer id="mainFooter">
+        <!-- Main Footer -->
+        <footer id="mainFooter">
+            <div id="footerCon">
                 <nav id="footerNav">
                     <h2 class="hidden">Footer Navigation</h2>
-                    
+                        
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">FAQs</a></li>
@@ -86,9 +155,13 @@
                     </ul>
                 </nav><!--End footerNav-->
 
-                <div id="copyRight"><p>Discovering London. ©2018. All Rights Reserved.</p></div><!--End Copyright-->
-            </footer><!--End mainFooter-->
-        </div><!--End siteContainer-->
+                <div id="copyRight">
+                    <div id="footerLogo"><img src="images/logo_light.svg" alt="Discovering London Logo" width="240" height="59"></div>
+
+                    <p>Discovering London. ©2018. All Rights Reserved.</p>
+                </div><!--End Copyright-->
+            </div>
+        </footer><!--End mainFooter-->
 
         <script src="js/main.js"></script>    
     </body>

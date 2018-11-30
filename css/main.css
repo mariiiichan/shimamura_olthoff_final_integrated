@@ -1,21 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/*Remove this rule, this is only for demo purposes to make the boxes black with white text
-The line height on the <p> tag gives each box a height value*/
+/*------------------------------General Properties------------------------------*/
 
-p
-{
-	color: #fff;
-	line-height: 100px;
-	background: #000;
-	text-align: center;
-	margin: 0;
-}
-
-/*basic reset*/
-/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
-
+/*Basic reset*/
 div,p,body,header,footer,section,article,nav 
 { 
 	margin: 0; 
@@ -29,19 +17,12 @@ img
 	padding: 0; 
 }
 
-/*html selectors*/
-
 body 
 {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 12px;
 	color: #333;
 }
-
-
-/*a:link is for not visited(standard unclicked link), 
-a:visited is for visited, and just a applies to both.*/
-/*a will also style anchor links*/
 
 a:link, a:visited 
 { 
@@ -54,62 +35,97 @@ a:hover, a:active
 	text-decoration:none; 
 }
 
-/*hide elements from browser but show for doc outline*/
-
+/*Hide elements from browser but show for doc outline*/
 .hidden
 {
 	display: none;
 }
 
-/*section is block level and no width specidied therefore stretches full screen*/
+/*Top bar properties*/
 #topBar
 {
-	background-color: #000;
+	background-color: #163e73;
+	height: 30px;
+}
+
+#topBarCon
+{
+	width: 920px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	color: white;
+	text-transform: uppercase;
+}
+
+/*Social media properties*/
+#socialMedia
+{
+	height: 30px;
+}
+
+#iconNav
+{
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	padding-top: 7px;
+}
+
+#iconNav li
+{
+	display: inline;
+	margin-right: 10px;
+}
+
+/*Search bar properties*/
+#searchBar
+{
+	margin-left: auto;
+	padding-top: 5px;
+}
+
+#searchBar input
+{
+	width:190px;
 	height: 20px;
+	padding: 3px;
+	border: none;
+	border-radius:2px;
 }
 
 /*Site Container*/
-/*This is essentially a box that we place the whole site in.  
-We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
-
 #siteContainer 
 {
 	margin: 0 auto;
 	width: 920px;
-	padding-left: 20px;
-	padding-right: 20px;
+	background-color: #fff;
 }
 
-/*This is a flex container*/
+/*Header properties*/
 #mainHeader
 {
-	margin-top: 40px;
+	padding-top: 40px;
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
-	border-bottom: solid 1px #DDD;
+	border-bottom: solid 1px #ddd;
 }
 
-/*This is a flex item*/
+/*Logo properties*/
 #logo
 {
 	width: 325px;
-}
-
-/*This is also a flex item*/
-/*We use margin left auto to send it all the way to the right*/
-#mainNav 
-{
-	margin-left: auto;
-	width: 600px;
 }
 
 /*Makes lists appear side by side with no bullets for navs*/
 nav ul
 {
 	list-style: none;
-	padding-top: 35px;
+	margin: 0 auto;
+	padding-left: 0;
 }
 
 nav ul li
@@ -117,43 +133,249 @@ nav ul li
 	display: inline;
 }
 
-#mainNav ul li
+/*Main navigation properties*/
+#mainNav 
 {
-	padding-left: 25px;
-	font-size: 15px;
+	margin-left: auto;
+	width: 550px;
+	height: 77px;
+	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
+}
+#mainNav ul
+{
+	width:550px;
+	margin-top: 30px;
 }
 
-#footerNav ul li
+#mainNav ul li a
 {
-	padding-right: 25px;
-	font-size: 12px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #163e73;
+	padding: 3px 10.5px 3px 10.5px;
+	margin: 0;
+	border-right: solid 1px #ddd;
+	transition: .25s;
 }
 
-#budweiserGardens
+#mainNav ul li:last-child a
+{
+	border-right: none;
+}
+
+#mainNav ul li a:hover
+{
+	color: #47c7ea;
+}
+
+/*Footer properties*/
+#mainFooter 
 {
 	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+	height: 140px;
+  	background-color: #163e73;
+  	color: #fff;
+}
+
+#footerCon
+{
+	width: 920px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
 }
 
-/*Get rid of this, here just to give different height to promo*/
-#budweiserGardens p 
+/*Footer nav properties*/
+#footerNav 
 {
-	line-height: 250px;
+	width: 550px;
+	height: 55px;
+	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
+	margin-top: 45px;
 }
 
-#budweiserGardensText 
+#footerNav ul
 {
-	width: 600px;
+	width:550px;
+	margin-top: 20px;
+	padding-left: 5px;
 }
 
-#budweiserGardensImage 
+#footerNav ul li a
+{
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fff;
+	padding: 3px 9px 3px 9px;
+	margin: 0;
+	border-right: solid 1px #ddd;
+	transition: .25s;
+}
+
+#footerNav ul li:last-child a
+{
+	border: none;
+}
+
+#footerNav ul li a:hover
+{
+	color: #47c7ea;
+}
+
+/*Footer copyright properties*/
+#copyRight 
 {
 	margin-left: auto;
+	margin-top: 30px;
+	width: 265px;
+}
+
+#copyRight p
+{
+	margin-top: 5px;
+}
+
+#footerLogo
+{
+	margin-left: 10px;
+}
+
+/*------------------------------Index Page Properties------------------------------*/
+
+/*About London properties*/
+#aboutLondon
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 40px;
+}
+
+/*Index page and Popular page share some properties so define those together here*/
+#aboutLondonCon, #budweiserGardensCon
+{
+	background-color: #163e73;
+	border-radius: 10px;
+	padding: 13px;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+#aboutLondonText h2, #budweiserGardensText h2
+{
+	margin: 0;
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 30px;
+}
+
+#aboutLondonText h3, #budweiserGardensText h3
+{
+	margin: 0;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #47c7ea;
+	line-height: 30px;
+}
+
+#aboutLondonText p
+{
+	font-size: 15px;
+	line-height: 22px;
+}
+
+#aboutLondonPic, #budweiserGardensPic
+{
+	margin-left: auto;
+	float: right;
+	padding-left: 13px;
+}
+
+/*Things To Do properties*/
+#thingsToDo
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+}
+
+.toDo
+{
 	width: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.toDoText
+{
+	font-size: 25px;
+	text-transform: uppercase;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+}
+
+.toDoText a
+{
+	display: block;
+	color: #163e73;
+	width: 280px;
+	height: 45px;
+	background-color: rgba(255, 255, 255, .8);
+	padding-top: 15px;
+	transition: .5s;
+}
+
+.toDoText a:hover
+{
+	height: 60px;
+}
+
+/*------------------------------Popular Page Properties------------------------------*/
+
+/*Budweiser Gardens properties*/
+#budweiserGardens
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+  	justify-content: flex-start;
+}
+
+#budweiserGardensText ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none
+}
+
+#budweiserGardensText ul li
+{
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.event
+{
+	font-style: italic;
+}
+
+#budweiserGardensPic
+{
+	margin-left: auto;
 }
 
 #popularAttractions
@@ -162,14 +384,8 @@ nav ul li
 	display: flex;
 	flex-direction: row;
   	justify-content: space-between;
-	border-bottom: solid 1px #DDD;
+	border-bottom: solid 1px #ddd;
 	padding-bottom: 40px;
-}
-
-/*Get rid of this, here just to give different height to productInfo*/
-#popularAttractions p 
-{
-	line-height: 300px;
 }
 
 .attraction 
@@ -177,46 +393,109 @@ nav ul li
 	width: 200px;
 }
 
-#mainFooter 
+.attraction h3
 {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: normal;
+	color: #163e73;
+	margin-bottom: 5px;
 }
 
-#footerNav 
+.attraction p
 {
-	width: 700px;
+	line-height: 20px;
+	margin-bottom: 10px;
 }
 
-#copyRight 
+.learnMore
 {
-	margin-left: auto;
-	width: 310px;
+	text-transform: uppercase;
+	font-size: 13px;
+	border-left: solid 2px #163e73;
+	padding-left: 7px;
+	color: #163e73;
+	transition: .25s;
 }
 
-/*Page 2 - Notice we are using one style sheet for all of the pages*/
+.learnMore:hover
+{
+	color: #47c7ea;
+	border-left: solid 2px #47c7ea;
+	padding-left: 10px;
+}
+
+/*------------------------------Contact Page Properties------------------------------*/
 
 #contactContent {
 	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
+	border-bottom: solid 1px #ddd;
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
 }
 
-/*Get rid of this, here just to give different height to promo*/
-#contactContent p 
-{
-	line-height: 630px;
-}
-
-#contactForm
+.contactForm
 {
 	width: 440px;
+	background: url(../images/alley.jpg) no-repeat;
+}
+
+.contactForm h3
+{
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 35px;
+	margin-bottom: 45px;
+}
+
+.contactForm p
+{
+	color: #163e73;
+	margin-bottom: 15px;
+}
+
+.contactForm label
+{
+	color: #163e73;
+	font-size: 16px;
+}
+
+.contactForm input, textarea
+{
+	display: block;
+	margin-top: 5px;
+	margin-bottom: -10px;
+	padding: 10px;
+	width: 420px;
+	height: 10px;
+	border: 1px solid #333;
+	border-radius: 2px;
+}
+
+#message
+{
+	height: 140px;
+}
+
+.contactForm input[type='checkbox']
+{
+	display: inline;
+	width: 10px;
+}
+
+#submit
+{
+	width: 120px;
+	height: 30px;
+	background-color: #163e73;
+	color: white;
+	text-transform: uppercase;
+	padding-top: 7px;
+	margin-top: 15px;
 }
 
 #contactInfo
@@ -225,43 +504,39 @@ nav ul li
 	width: 440px;
 }
 
-/*Page 3*/
-
-#thingsToDo
+#contactInfoCon
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: space-between;
+	background-color: #163e73;
+	border-radius: 10px;
+	padding: 15px;
+	color: #fff;
 }
 
-/*Get rid of this, here just to give different height*/
-#thingsToDo p
+#contactInfoCon h3
 {
-	line-height: 250px;
+	color: #fff;
+	font-size: 30px;
+	margin: 0;
+	text-transform: uppercase;
 }
 
-.toDo
+#contactInfoCon ul
 {
-	width: 280px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
 }
 
-#aboutLondon
+#contactInfoCon ul li
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+	font-size: 20px;
+	font-style: normal;
 }
 
-/*Get rid of this, here just to give different height*/
-#aboutLondon p 
+.infoLabel
 {
-	line-height: 300px;
-}
-
-#promoImageBig
-{
-	width: 920px;
+	color: #47c7ea;
+	font-size: 22px;
+	line-height: 40px;
 }
